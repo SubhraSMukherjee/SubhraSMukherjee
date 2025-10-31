@@ -34,7 +34,7 @@ jobs:
 
           echo "Remove old Basges"
           sed -i '/<div align="right"><img src="https:\/\/img.shields.io\/badge\/Visits-/d' README.md          
-          echo -e "\n$badge" >> README.md
+          # echo -e "\n$badge" >> README.md
           # Option 2 (optional): insert under main title (# ProjectName)
           sed -i '/^### /a '"$badge"'' README.md
 
