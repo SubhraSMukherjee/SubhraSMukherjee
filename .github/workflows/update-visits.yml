@@ -5,10 +5,10 @@ on:
     branches:
       - main
   schedule:
-    - cron: '*/5 * * * *' # every 5 minutes
+    - cron: '*/5 * * * *'  # every 5 minutes
 
 permissions:
-  contents: write  # allow git push with GITHUB_TOKEN
+  contents: write  # needed to push changes
 
 jobs:
   update-visits:
@@ -32,19 +32,17 @@ jobs:
           visits=${{ steps.increment.outputs.visits }}
           badge='<div align="right"><img src="https://img.shields.io/badge/Visits-'"$visits"'-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>'
 
-          echo "🔍 Searching for existing Visits badge..."
+          echo "🔍 Removing any old badge lines..."
+          sed -i '/<div align="right"><img src="https:\/\/img.shields.io\/badge\/Visits-/d' README.md
 
-          if grep -q '<div align="right"><img src="https://img.shields.io/badge/Visits-' README.md; then
-            echo "🔄 Updating existing Visits badge..."
-            sed -i "s|<div align=\"right\"><img src=\"https://img.shields.io/badge/Visits-[^>]*></div>|$badge|" README.md
-          else
-            echo "➕ Adding new Visits badge..."
-            echo -e "\n$badge" >> README.md
-          fi
+          # Option 1: append at the end
+          echo -e "\n$badge" >> README.md
 
-          echo "✅ Updated README content:"
+          # Option 2 (optional): insert under main title (# ProjectName)
+          sed -i '/^# /a '"$badge"'' README.md
+
+          echo "Updated README badge:"
           grep "Visits" README.md
-
 
       - name: Commit and push changes
         run: |
