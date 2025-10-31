@@ -7,13 +7,16 @@ on:
   schedule:
     - cron: '*/5 * * * *' # Runs every 5 minutes
 
+permissions:
+  contents: write  # ✅ Required for git push to work
+
 jobs:
   update-visits:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4  # ✅ Use latest version
 
       - name: Increment visit counter
         id: increment
@@ -22,7 +25,7 @@ jobs:
           visits=$(cat visits.txt)
           visits=$((visits + 1))
           echo $visits > visits.txt
-          echo "::set-output name=visits::$visits"
+          echo "visits=$visits" >> $GITHUB_OUTPUT  # ✅ updated syntax
 
       - name: Update README.md
         run: |
@@ -30,10 +33,10 @@ jobs:
           badge="![Visits](https://img.shields.io/badge/Visits-$visits-blue)"
           sed -i 's|!\[Visits\](https://img.shields.io/badge/Visits-.*-blue)|'"$badge"'|' README.md
 
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
+          git config user.name 'github-actions'
+          git config user.email 'github-actions@github.com'
           git add visits.txt README.md
-          git commit -m 'Update visits count'
-          git push
+          git commit -m "Update visits count" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
