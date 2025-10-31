@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '*/5 * * * *' # Frequency 5 minutes
+    - cron: '*/5 * * * *' # Runs every 5 minutes
 
 permissions:
   contents: write  
@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  
+        uses: actions/checkout@v4
 
       - name: Increment visit counter
         id: increment
@@ -25,27 +25,26 @@ jobs:
           visits=$(cat visits.txt)
           visits=$((visits + 1))
           echo $visits > visits.txt
-          echo "visits=$visits" >> $GITHUB_OUTPUT  
+          echo "visits=$visits" >> $GITHUB_OUTPUT
 
-      - name: Update README.md
+      - name: Update README badge
         run: |
           visits=${{ steps.increment.outputs.visits }}
-          badge="![Visits](https://img.shields.io/badge/Visits-$visits-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge)"
+          badge='<div align="right"><img src="https://img.shields.io/badge/Visits-'"$visits"'-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>'
 
-  
-          if grep -q "!\[Visits\](https://img.shields.io/badge/Visits-" README.md; then
-          echo "Updating existing Visits badge..."
-          sed -i "s|!\[Visits\](https://img.shields.io/badge/Visits-[^)]*)|$badge|" README.md
+          # If badge exists, update it; otherwise insert it
+          if grep -q '<div align="right"><img src="https://img.shields.io/badge/Visits-' README.md; then
+            echo "🔄 Updating existing Visits badge..."
+            sed -i "s|<div align=\"right\"><img src=\"https://img.shields.io/badge/Visits-[^\"]*\" alt=\"Visits\"></div>|$badge|" README.md
           else
-            echo "➕ Adding new Visits badge to README.md..."
+            echo "➕ Adding new Visits badge..."
             echo -e "\n$badge" >> README.md
           fi
-
 
       - name: Commit and push changes
         run: |
           git config user.name 'github-actions'
           git config user.email 'github-actions@github.com'
           git add visits.txt README.md
-          git commit -m "Update visits count" || echo "No changes to commit"
+          git commit -m "Update visits count to ${{ steps.increment.outputs.visits }}" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
