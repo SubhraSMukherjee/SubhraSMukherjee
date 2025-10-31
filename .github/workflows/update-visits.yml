@@ -5,10 +5,10 @@ on:
     branches:
       - main
   schedule:
-    - cron: '*/5 * * * *' # Runs every 5 minutes
+    - cron: '*/5 * * * *' # every 5 minutes
 
 permissions:
-  contents: write  
+  contents: write  # allow git push with GITHUB_TOKEN
 
 jobs:
   update-visits:
@@ -32,10 +32,10 @@ jobs:
           visits=${{ steps.increment.outputs.visits }}
           badge='<div align="right"><img src="https://img.shields.io/badge/Visits-'"$visits"'-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>'
 
-          # If badge exists, update it; otherwise insert it
+          # Update existing badge or add a new one
           if grep -q '<div align="right"><img src="https://img.shields.io/badge/Visits-' README.md; then
             echo "🔄 Updating existing Visits badge..."
-            sed -i "s|<div align=\"right\"><img src=\"https://img.shields.io/badge/Visits-[^\"]*\" alt=\"Visits\"></div>|$badge|" README.md
+            sed -i "s|<div align=\"right\"><img src=\"https://img.shields.io/badge/Visits-[^\"']*-for-the-badge\" alt=\"Visits\"></div>|$badge|" README.md
           else
             echo "➕ Adding new Visits badge..."
             echo -e "\n$badge" >> README.md
