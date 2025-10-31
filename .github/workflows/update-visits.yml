@@ -31,7 +31,15 @@ jobs:
         run: |
           visits=${{ steps.increment.outputs.visits }}
           badge="![Visits](https://img.shields.io/badge/Visits-$visits-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge)"
+
+  
+          if grep -q "!\[Visits\](https://img.shields.io/badge/Visits-" README.md; then
+          echo "Updating existing Visits badge..."
           sed -i "s|!\[Visits\](https://img.shields.io/badge/Visits-[^)]*)|$badge|" README.md
+          else
+            echo "➕ Adding new Visits badge to README.md..."
+            echo -e "\n$badge" >> README.md
+          fi
 
 
       - name: Commit and push changes
