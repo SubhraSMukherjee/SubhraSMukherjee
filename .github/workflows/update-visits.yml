@@ -8,7 +8,7 @@ on:
     - cron: '*/5 * * * *'  # every 5 minutes
 
 permissions:
-  contents: write  # needed to push changes
+  contents: write  
 
 jobs:
   update-visits:
@@ -32,14 +32,11 @@ jobs:
           visits=${{ steps.increment.outputs.visits }}
           badge='<div align="right"><img src="https://img.shields.io/badge/Visits-'"$visits"'-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>'
 
-          echo "🔍 Removing any old badge lines..."
-          sed -i '/<div align="right"><img src="https:\/\/img.shields.io\/badge\/Visits-/d' README.md
-
-          # Option 1: append at the end
+          echo "Remove old Basges"
+          sed -i '/<div align="right"><img src="https:\/\/img.shields.io\/badge\/Visits-/d' README.md          
           echo -e "\n$badge" >> README.md
-
           # Option 2 (optional): insert under main title (# ProjectName)
-          sed -i '/^# /a '"$badge"'' README.md
+          sed -i '/^## /a '"$badge"'' README.md
 
           echo "Updated README badge:"
           grep "Visits" README.md
