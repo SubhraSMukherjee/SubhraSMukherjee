@@ -1,26 +1,5 @@
 ### Hi there, I am Subhra 👋  
+
 <div align="right">
-  <img src="https://img.shields.io/badge/Visits-21-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits">
+  <img src="https://img.shields.io/badge/Visits-0-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits">
 </div>
-
-
-
-
-
-<!--https://github.com/Armanx200/visitor-badge
-**SubhraSMukherjee/SubhraSMukherjee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-
-
-<div align="right"><img src="https://img.shields.io/badge/Visits-26-blue?label=PageVisitCounter<div align="right"><img src="https://img.shields.io/badge/Visits-25-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>labelColor=000000<div align="right"><img src="https://img.shields.io/badge/Visits-25-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>logo=GitHub<div align="right"><img src="https://img.shields.io/badge/Visits-25-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>logoColor=FFFFFF<div align="right"><img src="https://img.shields.io/badge/Visits-25-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>color=1D70B8<div align="right"><img src="https://img.shields.io/badge/Visits-25-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>style=for-the-badge" alt="Visits"></div>
