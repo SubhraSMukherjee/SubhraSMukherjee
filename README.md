@@ -1,4 +1,7 @@
-### Hi there, I am Subhra 👋 
+### Hi there, I am Subhra 👋  
+<div align="right">
+  <img src="https://img.shields.io/badge/Visits-21-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits">
+</div>
 
 
 
@@ -19,4 +22,3 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-<div align="right"><img src="https://img.shields.io/badge/Visits-24-blue?label=PageVisitCounter<div align="right"><img src="https://img.shields.io/badge/Visits-23-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>labelColor=000000<div align="right"><img src="https://img.shields.io/badge/Visits-23-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>logo=GitHub<div align="right"><img src="https://img.shields.io/badge/Visits-23-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>logoColor=FFFFFF<div align="right"><img src="https://img.shields.io/badge/Visits-23-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>color=1D70B8<div align="right"><img src="https://img.shields.io/badge/Visits-23-blue?label=PageVisitCounter&labelColor=000000&logo=GitHub&logoColor=FFFFFF&color=1D70B8&style=for-the-badge" alt="Visits"></div>style=for-the-badge" alt="Visits"></div>
