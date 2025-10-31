@@ -1,4 +1,4 @@
-### Hi there, I am Subhra 👋 <div align="right">![Visits](https://img.shields.io/badge/Visits-1-blue)</div>
+### Hi there, I am Subhra 👋 <div align="right">![Visits](https://img.shields.io/badge/Visits-2-blue)</div>
 
 
 
