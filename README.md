@@ -1,7 +1,7 @@
 ## Hi there, I am Subhra 👋
 
 
-![Visits](https://img.shields.io/badge/Visits-��0-blue)
+![Visits](https://img.shields.io/badge/Visits-��0-blue)
 <!--https://github.com/Armanx200/visitor-badge
 **SubhraSMukherjee/SubhraSMukherjee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
