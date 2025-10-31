@@ -36,7 +36,7 @@ jobs:
           sed -i '/<div align="right"><img src="https:\/\/img.shields.io\/badge\/Visits-/d' README.md          
           echo -e "\n$badge" >> README.md
           # Option 2 (optional): insert under main title (# ProjectName)
-          sed -i '/^## /a '"$badge"'' README.md
+          sed -i '/^### /a '"$badge"'' README.md
 
           echo "Updated README badge:"
           grep "Visits" README.md
