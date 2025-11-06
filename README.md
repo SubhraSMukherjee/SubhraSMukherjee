@@ -14,7 +14,7 @@ Then my motivation is about effective communication where I try to
 
 My repos are prototypical replications of projects undertaken in various orgs to better explain my work
 ___
-I am an ex programmer spending the first 2 years of my career developing Software so i am neither impressed nor intimidated by the plethora of new data tools that keep getting marketed as **'Must have'**. However, since tools are useful for doing actual productive work, here is a list of tools/platforms i have used most:
+I am an ex software engineer spending the first 2 years of my career writing software for large corporates so i am neither impressed nor intimidated by the plethora of new data tools that keep getting marketed as **'Must have'**. However, since tools are useful for doing actual productive work, here is a list of tools/platforms i have used most:
 
 <br>**Programming Languages**</br>
 | Language | Usage |
