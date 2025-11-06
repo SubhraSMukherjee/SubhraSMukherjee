@@ -21,6 +21,7 @@ I am an ex programmer spending the first 2 years of my career developing Softwar
 | --- | --- |
 | ![Page_1](https://github.com/SubhraSMukherjee/SubhraSMukherjee/blob/main/screenshots/python.png) | Naturally as with any General-Purpose Language I have used python for almost everything, from modelling to experimentation setup to orchestrating pipelines to creating customised platform independent dashboards. Also, Querying No-Sql Databases  |
 | ![Page_1](https://github.com/SubhraSMukherjee/SubhraSMukherjee/blob/main/screenshots/SQL.png) | Yes and Yes, I use SQL regularly and am proficient at it have used all sorts of dialects (Google SQL, Databricks SQL, Snowflake SQL, My SQL, PLSQL). SQL is extremely useful but only in the context of an RDBMS   |
+| ![Page_1](https://github.com/SubhraSMukherjee/SubhraSMukherjee/blob/main/screenshots/R.png) | R for some very specific statistical/data mining libraries not that well supported in python e.g. 'forecast' and 'xts' for various time series modeling needs that offer a more comprehensive range of traditional statistical methods than generally found in Python's statsmodels   |
 | ![Page_1](https://github.com/SubhraSMukherjee/SubhraSMukherjee/blob/main/screenshots/bash.png) | Bash and Powershell for containerization, writing small utilitarian server side scripts  |
 
 
